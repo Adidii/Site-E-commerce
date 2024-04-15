@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Mon Hôtel</title>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Mon Hôtel</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Chambres</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container" id="home">
+        <div class="reserve-form-container">
+            <div class="images">
+                <div><img src="photo/im3.jpg" alt="Chambre d'hôtel"></div>
+                <div><img src="photo/im4.jpg" alt="Chambre d'hôtel"></div>
+                <div><img src="photo/im2.jpg" alt="Chambre d'hôtel"></div>
+            </div>
+            <div class="form">
+                <div class="reserve-form">
+                    <h2>Réservez une chambre d'hôtel</h2>
+                    <p>Réservez en ligne. Chambre à la journée avec enregistrement et départ le même jour.</p>
+                    <form action="#">
+                        <label for="fullname">Votre Nom Complet</label>
+                        <input type="text" name="fullname" id="fullname" required>
+                        <label for="arrival">Arrivée</label>
+                        <input type="date" name="arrival" id="arrival" required>
+                        <label for="departure">Départ</label>
+                        <input type="date" name="departure" id="departure" required>
+                        <div class="labels">
+                            <div class="left-label">
+                                <label for="adult">Adultes</label>
+                                <select name="adult" class="select" id="adult" required>
+                                    <option value="0" selected>0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <div class="right-label">
+                                <label for="children" class="small">Enfants</label>
+                                <select name="children" class="select" id="children" required>
+                                    <option value="0" selected>0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label for="product">Produit</label>
+                        <select name="product" id="product" required>
+                            <option value="chambre_standard">GUEST ROOMS - $100</option>
+                            <option value="chambre_deluxe">SUITES - $150</option>
+                            <option value="suite">SIGNATURES ET SUITES- $200</option>
+                        </select>
+                        <label for="price">Prix Total</label>
+                        <input type="text" name="price" id="price" readonly>
+                        <input type="submit" value="Réserver maintenant">
+                    </form>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Mon Hôtel. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.images').slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: false,
+            dots: true
+        });
+    });
+</script>
+
+</body>
+</html>
